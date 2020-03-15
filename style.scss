@@ -1,0 +1,64 @@
+.squares {
+    display: flex;
+}
+div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    animation-name: color;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+div:hover {
+    border-style: solid;
+    border-color: white;
+    transition: 1s;
+}
+.square1 {
+    background-color: lightcoral;
+    top: 0;
+    left: 0;
+    animation-name: top; 
+}
+.square2 {
+    background-color: lightblue;
+    bottom: 0%;
+    left: 0;
+    animation-name: under;
+}
+.square3 {
+    background-color: lightgreen;
+    top: 0;
+    right: 0%;
+    animation-name: right;
+}
+.square4 {
+    background-color: lightgoldenrodyellow;
+    bottom: 0%;
+    right: 0%;
+    animation-name: bottom;
+}
+@keyframes top {
+   0% {border-bottom-right-radius: 0;}
+   25% {border-bottom-right-radius: 20%;}
+   50% {border-bottom-right-radius: 30%;}
+   100% {background-color: black; border-bottom-right-radius: 100%; top: 50%; left: 50%;}
+}
+@keyframes under {
+    0% {border-top-right-radius: 0;}
+    25% {border-top-right-radius: 20%;}
+    50% {border-top-right-radius: 30%;}
+    100% {background-color: black; border-top-right-radius: 100%; bottom: 50%; left: 50%;}
+}
+@keyframes right {
+    0% {border-bottom-left-radius: 0;}
+    25% {border-bottom-left-radius: 20%;}
+    50% {border-bottom-left-radius: 30%;}
+    100% {background-color: black; border-bottom-left-radius: 100%; top: 50%; right: 50%;}
+}
+@keyframes bottom {
+    0% {border-top-left-radius: 0;}
+    25% {border-top-left-radius: 20%;}
+    50% {border-top-left-radius: 30%;} 
+    100% {background-color: black; border-top-left-radius: 100%; bottom: 50%; right: 50%;}
+}
